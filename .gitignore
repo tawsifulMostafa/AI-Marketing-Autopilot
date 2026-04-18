@@ -17,6 +17,7 @@ node_modules/
 .next/
 dist/
 build/
+*.tsbuildinfo
 
 # Local tooling
 .DS_Store

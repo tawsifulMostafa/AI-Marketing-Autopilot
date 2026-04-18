@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Aptos", "Gill Sans", "Trebuchet MS", sans-serif;
+  --grain: radial-gradient(circle at 20% 20%, rgba(242, 100, 58, 0.12), transparent 24%),
+    radial-gradient(circle at 78% 10%, rgba(38, 79, 89, 0.16), transparent 30%),
+    radial-gradient(circle at 30% 90%, rgba(214, 168, 79, 0.22), transparent 28%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #f6efe1;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #17130d;
+  background:
+    linear-gradient(135deg, rgba(246, 239, 225, 0.96), rgba(226, 216, 193, 0.88)),
+    var(--grain);
+  font-family: var(--font-body);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.dashboard-grid {
+  background-image:
+    linear-gradient(rgba(23, 19, 13, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 19, 13, 0.055) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.rise-in {
+  animation: rise-in 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}

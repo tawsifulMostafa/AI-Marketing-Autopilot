@@ -1,7 +1,9 @@
 """SQLAlchemy model registry."""
 
+from app.models.approval import ApprovalRequest, ApprovalStatus
 from app.models.auth import User
 from app.models.campaign import AdPlatform, Campaign, CampaignMetric, CampaignStatus
+from app.models.creative import CreativeAsset, CreativeVariant
 from app.models.decision import (
     AIDecision,
     ActionProposal,
@@ -9,6 +11,7 @@ from app.models.decision import (
     DecisionStatus,
     RiskLevel,
 )
+from app.models.execution import ExecutionLog
 from app.models.organization import Organization, OrganizationMember, UserRole
 from app.models.product import (
     Product,
@@ -24,10 +27,15 @@ __all__ = [
     "AIDecision",
     "ActionProposal",
     "ActionType",
+    "ApprovalRequest",
+    "ApprovalStatus",
     "Campaign",
     "CampaignMetric",
     "CampaignStatus",
+    "CreativeAsset",
+    "CreativeVariant",
     "DecisionStatus",
+    "ExecutionLog",
     "Product",
     "ProductInsight",
     "ProductPerformanceLabel",

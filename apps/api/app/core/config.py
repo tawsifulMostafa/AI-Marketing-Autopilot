@@ -48,6 +48,11 @@ class Settings(BaseSettings):
     meta_app_id: str | None = None
     meta_app_secret: str | None = None
     meta_access_token: str | None = None
+    meta_ad_account_id: str | None = None
+    meta_page_id: str | None = None
+    meta_api_version: str = "v21.0"
+    meta_default_campaign_status: str = "PAUSED"
+    meta_default_ad_status: str = "PAUSED"
 
     google_ads_developer_token: str | None = None
     google_ads_client_id: str | None = None
